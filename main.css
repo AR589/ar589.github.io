@@ -1,0 +1,16 @@
+/* ========================================
+ * main.css
+ * ======================================== */
+
+body {
+  font-family: sans-serif;
+  max-width: 800px;
+  padding: 10%;
+}
+
+p,
+ul {
+  line-height: 2;
+  font-size: 1.15em;
+  font-family: monospace;
+}
