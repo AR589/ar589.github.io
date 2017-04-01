@@ -2,59 +2,212 @@
  * main.css
  * ======================================== */
 
-body {
-  font-family: sans-serif;
-  padding: 10% 5%;
+/* Import Montserrat from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i');
+ 
+/* ----------------------------------------
+ * Page Structure
+ * ---------------------------------------- */
+
+ body {
+   font-family: 'Montserrat', sans-serif;
+   margin: 0;
+   padding: 0;
+ }
+
+.page-title,
+.banner {
+  background: hsl(8, 0%, 95%);
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  padding: 2em;
+}
+
+a {
+  color: hsl(8, 97%, 65%);
+}
+
+a:hover,
+a:focus {
+  color: hsl(8, 97%, 55%);
+}
+
+ul {
+  padding-left: 1.4em;
+}
+
+/* ----------------------------------------
+ * Globla Header
+ * ---------------------------------------- */
+
+.global-header {
+  background: hsl(8, 97%, 65%);
 }
 
 @media (min-width: 800px) {
-  .container {
+  .global-header {
+    background: hsl(8, 97%, 65%);
+    bottom: 0;
     display: flex;
-    flex-direction: row;
-    flex-flow: wrap;
+    flex-flow: column;
+    left: 0;
+    overflow: scroll;
+    position: fixed;
+    top: 0;
+    width: 300px;
+    z-index: 100;
   }  
 }
 
-.page-title {
-  border-bottom: 4px solid black;
-  margin-bottom: 5%;
-  padding-bottom: 6px;
-  width: 100%;
+.global-header .page-title {
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-main {
-  flex: 2;
-  margin-right: 30px;
+/* Menu Button */
+.global-header .menu {
+  font-size: 12px;  
+  text-transform: uppercase;
+  color: hsl(8, 97%, 65%);
+  letter-spacing: .1em;
 }
 
-aside {
-  flex: 1;
+@media (min-width: 800px) {
+  .global-header .menu {
+    display: none;
+  }  
 }
 
-.highlight {
-  background: lightyellow;
+.global-header a {
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+
+/* Main Navigation */
+
+.nav {
+  color: white;
+  flex: 1 1;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.nav.open {
+  display: block;
+}
+
+@media (min-width: 800px) {
+  .nav {
+    display: block;
+  }
+}
+
+.nav a {
+  border-bottom: 1px solid hsl(8, 97%, 55%);
+  line-height: 1.2;
+  padding: 1em 2em;
+}
+
+.nav a:after {
+  content: '\2192';
+  position: absolute;
+  font-size: 1.25em;
+  right: 1.75em;
+  transition: all .4s;
+}
+
+.nav :hover a:after {
+  content: '\2192';
+  right: 1em;
+}
+
+/* ----------------------------------------
+ * Main Content Area
+ * ---------------------------------------- */
+
+@media (min-width: 800px) {
+  main {
+    margin-left: 300px;
+  }
+}
+
+main .page-title,
+main .banner {
+  padding-left: 30px;
+}
+
+@media (min-width: 800px) {
+  main .page-title,
+  main .banner {
+    padding-left: 60px;
+  }
+}
+
+.banner {
+  background: black;  
+}
+
+.banner a {
+  text-decoration: none;
+}
+
+.content {
   padding: 30px;
+  max-width: 700px;
+}
+
+@media (min-width: 800px) {
+  .content {
+    padding: 60px;
+  }
+}
+
+/* ----------------------------------------
+ * Typography
+ * ---------------------------------------- */
+ 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+h2 {
+  border-bottom: 1px solid hsl(8, 97%, 65%);
+  padding-bottom: .5em;  
+}
+
+h2:not(:first-child) {
+  padding-top: 2em;
+}
+
+h3 {
+  margin-bottom: .25em;
+  padding-top: 2em;
 }
 
 p,
 ul {
-  font-family: monospace;
   font-size: 15px;
   line-height: 2;
-  max-width: 700px;
 }
 
-.btn {
-  border: 4px solid tomato;
-  color: tomato;
-  display: inline-block;
-  font-family: sans-serif;
-  font-weight: bold;
-  padding: .25em .75em;
-  text-decoration: none;
+.intro {
+  font-size: 1.25em;
 }
 
-aside .btn {
-  display: inline-block;
-  margin-top: 30px;
+.measure {
+  max-width: 500px;
+}
+
+ul.plain {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
