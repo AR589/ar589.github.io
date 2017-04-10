@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BU Interactive Design | AR589</title>
+  <link rel="stylesheet" href="/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <!-- Global Header -->
+  <header class="global-header">
+    <h1 class="page-title">
+      <a href="/">Interactive Design</a>
+      <a href="#" class="menu">Menu</a>
+    </h1>
+
+    <ul class="nav">
+      <li><a href="/syllabus.pdf">Download Syllabus</a></li>
+      <li><a href="/week1">Week 1</a></li>
+      <li><a href="/week2">Week 2</a></li>
+      <li><a href="/week3">Week 3</a></li>
+      <li><a href="/week4">Week 4</a></li>
+      <li><a href="/week5">Week 5</a></li>
+      <li><a href="/week6">Week 6</a></li>
+      <li><a href="/week7">Week 7</a></li>
+      <li><a href="/week8">Week 8</a></li>
+      <li><a href="/week9">Week 9</a></li>
+      <li><a href="/week10">Week 10</a></li>
+      <li><a href="/week11">Week 11</a></li>
+      <li><a href="/week12">Week 12</a></li>
+      <!-- <li><a href="/week13">Week 13</a></li> -->
+      <!-- <li><a href="/week14">Week 14</a></li> -->
+      <!-- <li><a href="/week15">Week 15</a></li> -->
+    </ul>
+  </header>
+
+  <!-- Main Content Area -->
+  <main>
+
+    <h1 class="page-title">AR 589 — Week 12</h1>
+
+    <div class="content">
+      <h2>JavaScript: Working with Events</h2>
+
+      <h3>How Events Work</h3>
+      <ul>
+        <li><strong>User</strong> does something, like click a link.</li>
+        <li><strong>Browser</strong> reports the event in the form of an event object, supplied to the designer.</li>
+        <li><strong>Designer</strong> User can "handle" the event (or not).</li>
+      </ul>
+      
+      <h3>What's an Event?</h3>
+      <ul>
+        <li>A JavaScript Object!</li>
+        <li>As you browse the web, the browser is constantly telling you what the user is doing.</li>
+        <li>You can “listen” for different events.</li>
+        <li>When you the browser tells you about an event, you can “handle” it.</li>
+      </ul>
+      
+      <h3>Types of Events</h3>
+      <ul>
+        <li>Browser Events</li>
+        <li>User Interface Events</li>
+        <li>DOM Events</li>
+        <li>Form Events</li>
+      </ul>
+      <p>See the lecture slides for lists of common events</p>
+      
+      <h2>How to Handle Events</h2>
+      <h3>Step 1: Select an element</h3>
+      <code>var myElem = document.querySelector('.myClass');</code>
+      
+      <h3>Step 2: Tell the browser what event you're listening for and tell it what function should handle the event.</h3>
+      <code>myElem.addEventListner('click', myFunction)</code>
+      
+      <h3>Step 3: Write your fucntion!</h3>
+      <code>function myFunction (event) {
+        // Do something here...
+      }</code>
+      
+      <p>Note: <code>addEventLisener</code> implicitly sends an event object to the function it calls.</p>
+      
+      <h2>The Event Object</h2>
+      <ul>
+        <li>Gives you a ton of information</li>
+        <li>You will commonly work with <code>event.target</code> and <code>event.type</code> properties</li>
+        <li>Has two methods: <code>event.preventDefault()</code> and event.stopPropagation()</li>
+      </ul>
+      
+      <h2>Event Bubbling</h2>
+      <p>An event reaches the "deepest" or most nested element first and then "bubbles" up until it reaches the root document element. You can listen for events on any element the event touches.</p>
+      
+      <h2>Demo</h2>
+      <p>For a working example, <a href="https://github.com/AR589/examples/tree/master/events">see the class demo</a></p>
+      
+    </div>
+
+    <div class="banner">
+      <a href="week12-slides.pdf">Lecture Slides &rarr;</a>
+    </div>
+  </main>
+  <script src="/main.js" charset="utf-8"></script>
+</body>
+
+</html>
