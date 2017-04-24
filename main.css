@@ -64,9 +64,14 @@ ul {
 .global-header .page-title {
   background: black;
   color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+}
+
+@media (max-width: 800px) {
+  .global-header .page-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }  
 }
 
 /* Menu Button */
