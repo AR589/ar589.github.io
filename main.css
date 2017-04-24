@@ -216,3 +216,17 @@ ul.plain {
   padding: 0;
   margin: 0;
 }
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  max-width: 100%;
+  margin: 1em 0 3em;
+}
+
+.btn {
+  text-decoration: none;
+  padding: .5em 1.5em;
+  border: 4px solid tomato;
+  border-radius: 30px;
+}
