@@ -1,5 +1,2 @@
-body {
-  margin: 0;
-  font-family: sans-serif;
-  padding: 5% 40px;
-}
+.blue { color: blue; }
+.bg-blue { background-color: blue; }
