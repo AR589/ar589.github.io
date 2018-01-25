@@ -1,0 +1,137 @@
+/* Global Styles  */
+
+:root {
+  /* HELPFUL HINT
+   * These are CSS variables! More info: 
+   * https://css-tricks.com/css-custom-properties-theming
+   */
+  --gutter: 30px;
+  --bg-light-blue: hsl(240, 100%, 50%, 0.03);
+}
+
+body {
+  font-family: 'Avenir', sans-serif;
+}
+
+a {
+  color: blue;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+/* ==================================================
+ * Header and Class Resources Styles
+ * ================================================== */
+
+.header,
+.class-resources {
+  display: grid;
+  grid-gap: var(--gutter); /* Here we're using a CSS variable as a value */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Header Specific Styles */
+
+.header {
+  background: blue;
+  color: white;
+  min-height: 50vw;
+  padding: var(--gutter);
+}
+
+.header .title {
+  align-content: end;
+  display: grid;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.header .description {
+  align-content: space-between;
+  display: grid;
+}
+
+.header p {
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Class Resources Specific Styles */
+
+.class-resources {
+  background: var(--bg-light-blue);
+  padding: 20px var(--gutter);
+}
+.class-resources h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+.class-resources a {
+  margin-right: 1rem;
+}
+
+/* ==================================================
+ * Week Styles
+ * ================================================== */
+
+.week {
+  grid-column: 2;
+  padding: 80px var(--gutter) 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--gutter);
+  align-items: baseline;
+  border-bottom: 1px solid var(--bg-light-blue);
+}
+
+.week h2,
+.week .summary {
+  font-size: 1.5em;
+  line-height: 1.4;
+  margin-top: 0;
+}
+
+.week .reference {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: var(--gutter);
+}
+
+/* ==================================================
+ * Box Styles
+ * ================================================== */
+
+.box {
+  border: 1px solid silver;
+}
+
+.box .title {
+  background: var(--bg-light-blue);
+  font-size: 1rem;
+  margin: 0;
+  padding: 20px 15px 10px;
+}
+
+.box ul {
+  list-style-type: none;
+  padding: 0 15px;
+}
+
+.box li {
+  padding: 10px 0;
+}
+
+/* HELPFUL HINT
+ * This declaration use psuedo class selectors! More info: 
+ * https://css-tricks.com/pseudo-class-selectors
+ */
+.box li:not(:last-child) {
+  border-bottom: 1px solid silver;
+}
