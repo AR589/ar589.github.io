@@ -27,7 +27,17 @@ a:hover {
  * Header and Class Resources Styles
  * ================================================== */
 
-.header,
+.header {
+  display: grid;
+}
+
+@media (min-width: 600px) {
+  .header {
+    grid-gap: var(--gutter); /* Here we're using a CSS variable as a value */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
 .class-resources {
   display: grid;
   grid-gap: var(--gutter); /* Here we're using a CSS variable as a value */
@@ -82,13 +92,19 @@ a:hover {
  * ================================================== */
 
 .week {
-  grid-column: 2;
   padding: 80px var(--gutter) 100px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: var(--gutter);
-  align-items: baseline;
   border-bottom: 1px solid var(--bg-light-blue);
+}
+
+@media (min-width: 600px) {
+  .week {
+    grid-column: 2;
+    padding: 80px var(--gutter) 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--gutter);
+    align-items: baseline;
+  }
 }
 
 .week h2,
@@ -98,10 +114,12 @@ a:hover {
   margin-top: 0;
 }
 
-.week .reference {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: var(--gutter);
+@media (min-width: 600px) {
+  .week .reference {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: var(--gutter);
+  }
 }
 
 /* ==================================================
@@ -110,6 +128,7 @@ a:hover {
 
 .box {
   border: 1px solid silver;
+  margin-bottom: 1rem;
 }
 
 .box .title {
