@@ -38,6 +38,6 @@ a:hover {
 
 @media screen and (min-width: 60em) {
   .wm-vert-l {
-    writing-mode: vertical-rl;
+    writing-mode: vertical-lr;
   }
 }
