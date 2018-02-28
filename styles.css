@@ -17,3 +17,27 @@ a:hover {
 .bg-blue {
   background: blue;
 }
+
+/* Tachyons Style Vertical Type */
+
+.wm-vert {
+  writing-mode: vertical-rl;
+}
+
+@media screen and (min-width: 30em) {
+  .wm-vert-ns {
+    writing-mode: vertical-rl;
+  }
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .wm-vert-m {
+    writing-mode: vertical-rl;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .wm-vert-l {
+    writing-mode: vertical-rl;
+  }
+}
